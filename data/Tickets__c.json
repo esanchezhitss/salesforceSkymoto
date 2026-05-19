@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Tickets__c",
+        "referenceId": "Tickets__cRef1"
+      },
+      "Image_URL__c": "https://diccionario.isglobal.org/wp-content/uploads/2025/05/Incidencia.png",
+      "Reinicidencia__c": false,
+      "Telefono__c": 9621335689,
+      "TipoContratacion__c": "CELULAR",
+      "Tipo_Incidencia__c": "CAIDA DE INTERNET",
+      "descripcion_incidencia__c": "anofdsa",
+      "imagenagregada__c": "<img src=\"https://diccionario.isglobal.org/wp-content/uploads/2025/05/Incidencia.png\" alt=\"imagen incidencia\" border=\"0\"/>",
+      "meses__c": "AGOSTO"
+    },
+    {
+      "attributes": {
+        "type": "Tickets__c",
+        "referenceId": "Tickets__cRef2"
+      },
+      "Image_URL__c": "https://www.google.com/search?client=firefox-b-d&hs=DYY&sca_esv=853b2faddd699812&channel=entpr&udm=2&fbs=ADc_l-bpk8W4E-qsVlOvbGJcDwpn60DczFdcvPnuv8WQohHLTaMb_WtLz8zQ41bNqiqMK_2tAHCL8fGF2xU6_n5bwc1VQnfR-2i3m-Hxw8AVipIz45kzFjjDCxYaze00BT7L6r9jskn6XEYEdpuNPF",
+      "Reinicidencia__c": false,
+      "Telefono__c": 4344343444,
+      "TipoContratacion__c": "CELULAR",
+      "Tipo_Incidencia__c": "CAIDA DE INTERNET",
+      "descripcion_incidencia__c": "se pasa a produccion",
+      "imagenagregada__c": "<img src=\"https://www.google.com/search?client=firefox-b-d&amp;hs=DYY&amp;sca_esv=853b2faddd699812&amp;channel=entpr&amp;udm=2&amp;fbs=ADc_l-bpk8W4E-qsVlOvbGJcDwpn60DczFdcvPnuv8WQohHLTaMb_WtLz8zQ41bNqiqMK_2tAHCL8fGF2xU6_n5bwc1VQnfR-2i3m-Hxw8AVipIz45kzFjjDCxYaze00BT7L6r9jskn6XEYEdpuNPF\" alt=\"imagen incidencia\" border=\"0\"/>",
+      "meses__c": "ABRIL"
+    }
+  ]
+}
