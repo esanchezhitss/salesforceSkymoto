@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_Incidencia__c</fullName>
+    <label>TipoIncidencia</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>CAIDA DE INTERNET</fullName>
+                <default>true</default>
+                <label>CAIDA DE INTERNET</label>
+            </value>
+            <value>
+                <fullName>FALLA DE LUZ</fullName>
+                <default>false</default>
+                <label>FALLA DE LUZ</label>
+            </value>
+            <value>
+                <fullName>SIN FICHAS</fullName>
+                <default>false</default>
+                <label>SIN FICHAS</label>
+            </value>
+            <value>
+                <fullName>VULNERACIONES,</fullName>
+                <default>false</default>
+                <label>VULNERACIONES,</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
