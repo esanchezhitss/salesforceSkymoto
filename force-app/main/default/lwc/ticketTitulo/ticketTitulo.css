@@ -1,0 +1,15 @@
+:host{
+    max-width: 365 px;  
+    display: block; 
+    ;
+}
+p.description{
+ min-width: 60px;
+ text-decoration-color: black;
+}
+img.Ticket{
+    width: 200%;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(255, 0, 0);
+}
+ 

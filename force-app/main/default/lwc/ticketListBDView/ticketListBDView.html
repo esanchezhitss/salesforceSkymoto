@@ -1,0 +1,62 @@
+ 
+<template>
+   
+    <template if:true={ticketbdview}>
+        <lightning-card 
+            title={ticketbdview.descripcion_incidencia__c} 
+            icon-name="custom:custom96">
+             <lightning-button  label="Ver Detalles" slot="actions" onclick={handleViewDetails} ></lightning-button>
+            <div class="slds-p-around_medium">
+
+                <p>
+                    <strong>Descripción:</strong> 
+                    {ticketbdview.descripcion_incidencia__c}
+                </p>
+
+                <p>
+                    <strong>Tipo:</strong> 
+                    {ticketbdview.Tipo_Incidencia__c}
+                </p>
+
+                <!-- Imagen por URL -->
+                <template if:true={ticketbdview.Image_URL__c}>
+                    <img 
+                        src={ticketbdview.Image_URL__c} 
+                        alt="Imagen ticket"
+                        style="width:100%; border-radius:8px; margin-top:10px;">
+                </template>
+
+                <!-- Campo imagenagregada (puede ser file o base64 dependiendo config) -->
+                <template if:true={ticketbdview.imagenagregada__c}>
+                    <p style="margin-top:10px;">
+                        Imagen adicional disponible
+                    </p>
+                </template>
+                <template if:true={ticketbdview.Reinicidencia__c}>
+                    <lightning-icon 
+                        icon-name="utility:warning" 
+                        size="large" 
+                        alternative-text="Reincidencia" 
+                        class="slds-m-top_medium">  
+                    </lightning-icon>
+                    <p style="margin-top:10px; color: red;">
+                        urge Atención                       </p>    
+                </template>
+                <template if:false  ={ticketbdview.Reinicidencia__c}>
+
+                    <lightning-icon 
+                        icon-name="utility:check" 
+                        size="large" 
+                        alternative-text="No Reincidencia" 
+                        class="slds-m-top_medium">  
+                            <p style="margin-top:10px; color: green;">
+                                Entiempo de atención  
+                            </p>
+                    </lightning-icon>
+                </template>
+
+            </div>
+
+        </lightning-card>
+    </template>
+</template>

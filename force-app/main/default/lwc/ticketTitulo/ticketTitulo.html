@@ -1,0 +1,11 @@
+<template>
+        <lightning-card  title={ticket.title}   icon-name="custom:custom96">
+            <lightning-button label="Detalles" slot="actions"  ></lightning-button>
+            <!-- >Card Body -->
+            <p class="description">{ticket.description}</p>
+            <img src={ticket.imageUrl} alt={ticket.status} class="ticket" /> 
+             
+            <p  class="description" slot="footer">{ticket.fechaCreacion}</p>
+            <!-- >termina el cuerpo -->
+        </lightning-card>
+</template>

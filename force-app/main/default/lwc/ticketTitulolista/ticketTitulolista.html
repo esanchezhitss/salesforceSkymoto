@@ -1,0 +1,29 @@
+<template>
+    <template if:true={tickets}>
+        <div>
+            <template for:each={tickets} for:item="ticket">
+                
+                <div key={ticket.Id} class="slds-m-around_medium">
+                    
+                    <div class="slds-align_absolute-center">
+                        <lightning-card title={ticket.descripcion_incidencia__c} icon-name="custom:custom96">
+
+                            <lightning-button 
+                                label="Detalles" 
+                                slot="actions">
+                            </lightning-button>
+
+                            <p class="ticket-title">{ticket.descripcion_incidencia__c}</p>
+                            <p class="ticket-status">{ticket.Tipo_Incidencia__c}</p>
+
+                        </lightning-card>
+                    </div>
+
+                </div>
+
+            </template>
+        </div>
+    </template>
+    <template if:false={tickets}>
+        <p>No hay tickets disponibles.</p></template>
+</template>

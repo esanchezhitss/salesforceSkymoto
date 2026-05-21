@@ -1,0 +1,31 @@
+<template>
+ 
+ <div class="slds-align_absolute-center">
+        <lightning-input 
+            label="Buscar por Descripción" 
+           
+           
+            class="slds-m-bottom_medium">
+        </lightning-input>
+    </div>
+    
+    <div class="slds-align_absolute-center">
+        <div class="slds-grid slds-wrap slds-grid_align-spread grid">
+
+            <template if:true={ticketsbd.data}>
+                <template for:each={ticketsbd.data} for:item="ticketbd">
+
+                    <div key={ticketbd.Id} class="slds-col slds-var-p-around_small">
+
+                        <c-ticket-list-b-d-view
+                            ticketbdview={ticketbd}>
+                        </c-ticket-list-b-d-view>
+
+                    </div>
+
+                </template>
+            </template>
+
+        </div>
+    </div>
+</template>
