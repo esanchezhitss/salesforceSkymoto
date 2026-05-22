@@ -1,20 +1,21 @@
-import  {LightningElement, wire } from 'lwc';
-import getallTickets from '@salesforce/apex/ticketService.getallTickets';
-// import getTicketsBySearch from '@salesforce/apex/ticketService.getTicketsBySearch';
+import { LightningElement, wire } from "lwc";
+// import getallTickets from '@salesforce/apex/ticketService.getallTickets';
+import getTicketsBySearch from "@salesforce/apex/ticketService.getTicketsByDescription";
 export default class TickelistBD extends LightningElement {
-  @wire(getallTickets)
+  // @wire(getallTickets)
+  // ticketsbd;
+
+  searchTerm = "";
+  @wire(getTicketsBySearch, { searchTerm: "$searchTerm" })
   ticketsbd;
 
-  // searchTerm ;
-  // @wire(getTicketsBySearch, { searchTerm: '$searchTerm' })
-  //searchResults;
+  handleSearchChange(event) {
+    const busquedaText = event.target.value;
 
- 
-  // handleSearchChange(event) {
-  //   const searchTerm = event.target.value.toLowerCase();
-  //   this.ticketsbd.data = this.ticketsbd.data.filter(ticket =>
-    
-  //     ticket.descripcion_incidencia__c.toLowerCase().includes(searchTerm)
-  //   );
-  // }
-} 
+    if (busquedaText.length >= 3 || busquedaText === "") {
+      this.searchTerm = busquedaText;
+
+      console.log("Busqueda:", busquedaText);
+    }
+  }
+}
