@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Razas de Perros">
+    <template if:true={breeds}>
+      <ul>
+        <template for:each={breeds} for:item="breed">
+          <li key={breed.name}>
+            <strong>{breed.name}</strong>
+
+            <template if:true={breed.subBreeds.length}>
+              <ul>
+                <template for:each={breed.subBreeds} for:item="sub">
+                  <li key={sub}>{sub}</li>
+                </template>
+              </ul>
+            </template>
+          </li>
+        </template>
+      </ul>
+    </template>
+
+    <template if:true={error}>
+      <p>Error cargando datos</p>
+    </template>
+  </lightning-card>
+</template>
