@@ -9,6 +9,16 @@ export default class TickelistBD extends LightningElement {
   @wire(getTicketsBySearch, { searchTerm: "$searchTerm" })
   ticketsbd;
 
+  get hasTickets() {
+    return (
+      Array.isArray(this.ticketsbd?.data) && this.ticketsbd.data.length > 0
+    );
+  }
+
+  get ticketsData() {
+    return this.ticketsbd?.data || [];
+  }
+
   handleSearchChange(event) {
     const busquedaText = event.target.value;
 
