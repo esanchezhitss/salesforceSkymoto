@@ -11,6 +11,18 @@ public with sharing class ticketService {
         Reinicidencia__c
       FROM Tickets__c
     ];
+    // with security_enforced {
+    //   return [
+    //     SELECT
+    //       Id,
+    //       descripcion_incidencia__c,
+    //       Image_URL__c,
+    //       imagenagregada__c,
+    //       Tipo_Incidencia__c,
+    //       Reinicidencia__c
+    //     FROM Tickets__c
+    //   ];
+    // }
   }
 
   @AuraEnabled(cacheable=true)
