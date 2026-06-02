@@ -3,4 +3,5 @@
 //     query text and running the command:
 //     SFDX: Execute SOQL Query with Currently Selected Text
 
-SELECT Id, Name FROM Account
+SELECT CreatedById, CreatedDate, Id, IsDeleted, LastModifiedById, LastModifiedDate, LastReferencedDate, LastViewedDate, Name, SystemModstamp, fechaFinal__c, fechainicial__c, id_tickets__c, txtNumeroDias__c
+  FROM detalleTicket__c
